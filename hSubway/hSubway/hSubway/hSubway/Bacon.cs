@@ -6,7 +6,7 @@ namespace hSubway
 {
     class Bacon : ToppingDecorator
     {
-        public Bacon(BuildSandwich sandwich) : base(sandwich)
+        public Bacon(IBuildSandwich sandwich) : base(sandwich)
         {
 
         }

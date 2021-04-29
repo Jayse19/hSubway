@@ -8,7 +8,7 @@ namespace hSubway
     {
         public override string GetDescription()
         {
-            return base.GetDescription() + ", Mayo"
+            return base.GetDescription() + ", Mayo";
         }
 
         public override int GetCount()

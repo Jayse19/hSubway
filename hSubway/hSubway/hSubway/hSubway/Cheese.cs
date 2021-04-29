@@ -6,7 +6,7 @@ namespace hSubway
 {
     class Cheese: ToppingDecorator
     {
-        public Cheese(BuildSandwich sandwich) : base(sandwich)
+        public Cheese(IBuildSandwich sandwich) : base(sandwich)
         {
 
         }

@@ -8,6 +8,6 @@ namespace hSubway
     {
         public override string GetDescription()
         {
-            return base.GetDescription() + ", BBQ Sauce"
+            return base.GetDescription() + ", BBQ Sauce";
          }
     }

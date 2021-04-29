@@ -8,7 +8,7 @@ namespace hSubway
     {
         public override string GetDescription()
         {
-            return base.GetDescription() + ", Mustard"
+            return base.GetDescription() + ", Mustard";
         }
     }
 }

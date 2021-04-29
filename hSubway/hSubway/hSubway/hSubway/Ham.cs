@@ -6,7 +6,7 @@ namespace hSubway
 {
     class Ham
     {
-        public Ham(BuildSandwich sandwich) : base(sandwich)
+        public Ham(IBuildSandwich sandwich) : base(sandwich)
         {
 
         }

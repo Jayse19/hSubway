@@ -4,7 +4,7 @@ using System.Text;
 
 namespace hSubway
 {
-    public class ChickenSand : BuildSandwich
+    public class ChickenSand : IBuildSandwich
     {
         Bread breadType { get; set; }
 
