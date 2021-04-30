@@ -6,7 +6,10 @@ namespace hSubway
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Bread b = new ChickenSand(White);
+            b = new Bacon(b);
+            b.GetDescription();
+            b.GetPrice();
         }
 
     }
