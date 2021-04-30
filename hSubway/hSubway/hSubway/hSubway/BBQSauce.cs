@@ -10,4 +10,9 @@ namespace hSubway
         {
             return base.GetDescription() + ", BBQ Sauce";
          }
+
+        public override double GetPrice()
+        {
+            return GetPrice();
+        }
     }

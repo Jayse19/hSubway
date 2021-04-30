@@ -10,5 +10,10 @@ namespace hSubway
         {
             return base.GetDescription() + ", Mayo";
         }
+
+        public override double GetPrice()
+        {
+            return GetPrice();
+        }
     }
 }

@@ -109,7 +109,7 @@ namespace hSubway
 
         public override double GetPrice()
         {
-            return 2.50 + bread.GetPrice();
+            return 2.00 + bread.GetPrice();
         }
 
         public void Print()
@@ -128,7 +128,7 @@ namespace hSubway
 
         public override double GetPrice()
         {
-            return 2.25 + bread.GetPrice();
+            return 2.00 + bread.GetPrice();
         }
 
         public void Print()
