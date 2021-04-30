@@ -13,12 +13,12 @@ namespace hSubway
 
         public override string GetDescription()
         {
-            return base.GetDescription() + ", Bacon";
+            return base.GetDescription();
         }
 
         public override double GetPrice()
         {
-            return base.GetPrice() + 0.75;
+            return base.GetPrice();
         }
     }
 }

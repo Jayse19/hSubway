@@ -6,21 +6,21 @@ namespace hSubway
 {
     public class ChickenSand : IBuildSandwich
     {
-        Bread breadType { get; set; }
+        Bread bType;
 
-        public ChickenSand(BreadType bt)
+        public ChickenSand(Bread bt)
         {
-            breadType = new Bread(bt);
+            bType = bt;
         }
 
         public double GetPrice()
         {
-            return 2.00 + breadType.BreadCost;
+            return GetPrice();
         }
 
         public string GetDescription()
         {
-            return "Shredded Chicken Sandwich on " + breadType.BreadName;
+            return GetDescription();
         }
     }
 }

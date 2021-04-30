@@ -20,9 +20,9 @@ namespace hSubway
 
     }
 
-    public class PbjSand : Bread
+    public class Pbj : Bread
     {
-        public PbjSand()
+        public Pbj()
         {
             this.Name = "Peanut Butter and Jelly Sandwich";
         }
@@ -39,9 +39,9 @@ namespace hSubway
         }
 
     }
-    public class ChickenSand : Bread
+    public class ChickenSandwich : Bread
     {
-        public ChickenSand()
+        public ChickenSandwich()
         {
             this.Name = "Shredded Chicken Sandwich";
         }
@@ -79,68 +79,70 @@ namespace hSubway
     }
 
 
-    public class White: Bread
+ 
+        public class White : Bread
+        {
+            public Bread bread;
+            public White(Bread bt)
+            {
+                bread = bt;
+                this.Name = bread.GetDescription() + " on white bread";
+            }
+
+            public override double GetPrice()
+            {
+                return 2.00 + bread.GetPrice();
+            }
+
+            public void Print()
+            {
+                Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
+            }
+        }
+        public class Rye : Bread
+        {
+            public Bread bread;
+            public Rye(Bread bt)
+            {
+                bread = bt;
+                this.Name = bread.GetDescription() + " on rye bread";
+            }
+
+            public override double GetPrice()
+            {
+                return 2.00 + bread.GetPrice();
+            }
+
+            public void Print()
+            {
+                Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
+            }
+        }
+        public class Wheat : Bread
+        {
+            public Bread bread;
+            public Wheat(Bread bt)
+            {
+                bread = bt;
+                this.Name = bread.GetDescription() + " on wheat bread";
+            }
+
+            public override double GetPrice()
+            {
+                return 2.00 + bread.GetPrice();
+            }
+
+            public void Print()
+            {
+                Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
+            }
+        }
+    
+
+    public class Must : Bread
     {
         public Bread bread;
-        public White(Bread bt)
-        {
-            bread = bt;
-            this.Name = bread.GetDescription() + " on white bread";
-        }
-
-        public override double GetPrice()
-        {
-            return 2.00 + bread.GetPrice();
-        }
-
-        public void Print()
-        {
-            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
-        }
-    }
-    public class Rye : Bread
-    {
-        public Bread bread;
-        public Rye(Bread bt)
-        {
-            bread = bt;
-            this.Name = bread.GetDescription() + " on rye bread";
-        }
-
-        public override double GetPrice()
-        {
-            return 2.00 + bread.GetPrice();
-        }
-
-        public void Print()
-        {
-            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
-        }
-    }
-    public class Wheat : Bread
-    {
-        public Bread bread;
-        public Wheat(Bread bt)
-        {
-            bread = bt;
-            this.Name = bread.GetDescription() + " on wheat bread";
-        }
-
-        public override double GetPrice()
-        {
-            return 2.00 + bread.GetPrice();
-        }
-
-        public void Print()
-        {
-            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
-        }
-    }
-
-    public class Mustard : Bread
-    {
-        public Bread bread;
-        public Mustard(Bread topping)
+        public Must(Bread topping)
         {
             bread = topping;
             this.Name = bread.GetDescription() + " with Mustard";
@@ -158,10 +160,10 @@ namespace hSubway
 
        
     }
-    public class Mayo : Bread
+    public class Mayonnaise : Bread
     {
         public Bread bread;
-        public Mayo(Bread topping)
+        public Mayonnaise(Bread topping)
         {
             bread = topping;
             this.Name = bread.GetDescription() + " with Mayo";
@@ -200,10 +202,10 @@ namespace hSubway
 
 
     }
-    public class Bacon : Bread
+    public class BaconT : Bread
     {
         public Bread bread;
-        public Bacon(Bread topping)
+        public BaconT(Bread topping)
         {
             bread = topping;
             this.Name = bread.GetDescription() + " with Bacon";
@@ -212,6 +214,94 @@ namespace hSubway
         public override double GetPrice()
         {
             return 0.75 + bread.GetPrice();
+        }
+
+        public void Print()
+        {
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
+        }
+
+
+    }
+
+    public class LettuceT : Bread
+    {
+        public Bread bread;
+        public LettuceT(Bread topping)
+        {
+            bread = topping;
+            this.Name = bread.GetDescription() + " with Lettuce";
+        }
+
+        public override double GetPrice()
+        {
+            return 0.25 + bread.GetPrice();
+        }
+
+        public void Print()
+        {
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
+        }
+
+
+    }
+
+    public class HamT : Bread
+    {
+        public Bread bread;
+        public HamT(Bread topping)
+        {
+            bread = topping;
+            this.Name = bread.GetDescription() + " with Ham";
+        }
+
+        public override double GetPrice()
+        {
+            return 0.60 + bread.GetPrice();
+        }
+
+        public void Print()
+        {
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
+        }
+
+
+    }
+
+    public class CheeseT : Bread
+    {
+        public Bread bread;
+        public CheeseT(Bread topping)
+        {
+            bread = topping;
+            this.Name = bread.GetDescription() + " with Cheese";
+        }
+
+        public override double GetPrice()
+        {
+            return 0.60 + bread.GetPrice();
+        }
+
+        public void Print()
+        {
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
+        }
+
+
+    }
+
+    public class TomatoT : Bread
+    {
+        public Bread bread;
+        public TomatoT(Bread topping)
+        {
+            bread = topping;
+            this.Name = bread.GetDescription() + " with Tomato";
+        }
+
+        public override double GetPrice()
+        {
+            return 0.25 + bread.GetPrice();
         }
 
         public void Print()
