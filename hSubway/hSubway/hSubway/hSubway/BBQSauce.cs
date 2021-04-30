@@ -4,7 +4,7 @@ using System.Text;
 
 namespace hSubway
 {
-    class BBQSauce
+    public class BBQSauce : Bread
     {
         public override string GetDescription()
         {

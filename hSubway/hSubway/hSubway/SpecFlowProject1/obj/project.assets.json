@@ -6942,23 +6942,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trent.esplin\\.nuget\\packages\\": {},
+    "C:\\Users\\jayse.baruch\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trent.esplin\\Desktop\\SE Final\\hSubway\\hSubway\\hSubway\\SpecFlowProject1\\SpecFlowProject1.csproj",
+      "projectUniqueName": "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\SpecFlowProject1\\SpecFlowProject1.csproj",
       "projectName": "SpecFlowProject1",
-      "projectPath": "C:\\Users\\trent.esplin\\Desktop\\SE Final\\hSubway\\hSubway\\hSubway\\SpecFlowProject1\\SpecFlowProject1.csproj",
-      "packagesPath": "C:\\Users\\trent.esplin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trent.esplin\\Desktop\\SE Final\\hSubway\\hSubway\\hSubway\\SpecFlowProject1\\obj\\",
+      "projectPath": "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\SpecFlowProject1\\SpecFlowProject1.csproj",
+      "packagesPath": "C:\\Users\\jayse.baruch\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\SpecFlowProject1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\trent.esplin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jayse.baruch\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

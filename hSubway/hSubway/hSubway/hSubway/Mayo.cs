@@ -4,16 +4,11 @@ using System.Text;
 
 namespace hSubway
 {
-    class Mayo
+    public class Mayo : Bread
     {
         public override string GetDescription()
         {
             return base.GetDescription() + ", Mayo";
-        }
-
-        public override int GetCount()
-        {
-            return base.GetCount() + 1;
         }
     }
 }
