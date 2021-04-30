@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj": {}
+    "C:\\Users\\trent.esplin\\Desktop\\SEFinal\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj": {
+    "C:\\Users\\trent.esplin\\Desktop\\SEFinal\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj",
+        "projectUniqueName": "C:\\Users\\trent.esplin\\Desktop\\SEFinal\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj",
         "projectName": "hSubway",
-        "projectPath": "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj",
-        "packagesPath": "C:\\Users\\jayse.baruch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jayse.baruch\\Source\\Repos\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway\\obj\\",
+        "projectPath": "C:\\Users\\trent.esplin\\Desktop\\SEFinal\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj",
+        "packagesPath": "C:\\Users\\trent.esplin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trent.esplin\\Desktop\\SEFinal\\hSubway\\hSubway\\hSubway\\hSubway\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\jayse.baruch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\trent.esplin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
