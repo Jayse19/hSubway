@@ -20,6 +20,18 @@ namespace hSubway
 
             b.Print();
 
+            Bread p = new PbjSand();
+            p = new White(p);
+            p = new Tomato(p);
+            p = new BBQSauce(p);
+            p = new Mustard(p);
+            p = new Mayo(p);
+            p = new Cheese(p);
+
+            p.Print();
+
+            PantryInventory c = new PantryInventory();
+            Console.WriteLine(c.SellSandwich(b) + c.SellSandwich(p));
         }
 
     }
