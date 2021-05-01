@@ -6,7 +6,7 @@ namespace hSubway
 {
     public abstract class Bread
     {
-        public string Name = "We don't have that bread";
+        public string Name = "";
 
         public virtual string GetDescription()
         {
@@ -27,11 +27,15 @@ namespace hSubway
     public class White : Bread
     {
         public Bread bread;
+
         public White(Bread bt)
         {
+
             bread = bt;
+            
             this.Name = bread.GetDescription() + " on white bread";
         }
+ 
 
         public override double GetPrice()
         {

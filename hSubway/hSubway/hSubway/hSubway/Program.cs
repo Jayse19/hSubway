@@ -20,10 +20,6 @@ namespace hSubway
 
             b.Print();
 
-            Bread p = new PbjSand();
-            p = new Rye(p);
-            p = new White(p);
-            p.Print();
         }
 
     }
