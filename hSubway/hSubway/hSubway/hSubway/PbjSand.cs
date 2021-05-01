@@ -4,23 +4,22 @@ using System.Text;
 
 namespace hSubway
 {
-    public class PbjSand : IBuildSandwich
+    public class PbjSand : Bread
     {
-        Bread bType;
-
-        public PbjSand(Bread bt)
+        public PbjSand()
         {
-            bType = bt;
+            this.Name = "Peanut Butter and Jelly Sandwich";
         }
 
-        public double GetPrice()
+        public override double GetPrice()
         {
-            return GetPrice();
+            return 0.75;
+
         }
 
-        public string GetDescription()
+        public void Print()
         {
-            return GetDescription();
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
         }
     }
 }

@@ -20,7 +20,7 @@ namespace hSubway
 
         public bool inventoryInStock()
         {
-            if (whiteBread <= 1 || wheatBread <= 1 || ryeBread <= 1 || pbj == 0 || chicken == 0 || blt == 0 || )
+            if (whiteBread <= 1 || wheatBread <= 1 || ryeBread <= 1 || pbj == 0 || chicken == 0 || blt == 0 )
             {
                 return true;
             }

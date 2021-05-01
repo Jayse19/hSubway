@@ -6,14 +6,21 @@ namespace hSubway
 {
     public class Mayo : Bread
     {
-        public override string GetDescription()
+        public Bread bread;
+        public Mayo(Bread topping)
         {
-            return base.GetDescription();
+            bread = topping;
+            this.Name = bread.GetDescription() + " with Mayo";
         }
 
         public override double GetPrice()
         {
-            return GetPrice();
+            return bread.GetPrice();
+        }
+
+        public void Print()
+        {
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
         }
     }
 }

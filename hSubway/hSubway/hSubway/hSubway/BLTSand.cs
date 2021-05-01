@@ -4,23 +4,24 @@ using System.Text;
 
 namespace hSubway
 {
-    public class BLTSand : IBuildSandwich
+    public class BLTSand : Bread
     {
-        Bread bType;
-
-        public BLTSand(Bread bt)
+        public BLTSand()
         {
-            bType = bt;
+            this.Name = "Bacon Lettuce and Tomato Sandwich";
         }
 
-        public double GetPrice()
+        public override double GetPrice()
         {
-            return GetPrice();
+            return 2.50;
+
         }
 
-        public string GetDescription()
+        public void Print()
         {
-            return GetDescription();
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
         }
+
+
     }
 }

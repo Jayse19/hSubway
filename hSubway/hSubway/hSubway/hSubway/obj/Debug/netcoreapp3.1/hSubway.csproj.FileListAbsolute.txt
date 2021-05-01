@@ -2,3 +2,12 @@ C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\obj\Debug\
 C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\obj\Debug\netcoreapp3.1\hSubway.AssemblyInfoInputs.cache
 C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\obj\Debug\netcoreapp3.1\hSubway.AssemblyInfo.cs
 C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\obj\Debug\netcoreapp3.1\hSubway.csproj.CoreCompileInputs.cache
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\bin\Debug\netcoreapp3.1\hSubway.exe
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\bin\Debug\netcoreapp3.1\hSubway.deps.json
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\bin\Debug\netcoreapp3.1\hSubway.runtimeconfig.json
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\bin\Debug\netcoreapp3.1\hSubway.runtimeconfig.dev.json
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\bin\Debug\netcoreapp3.1\hSubway.dll
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\bin\Debug\netcoreapp3.1\hSubway.pdb
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\obj\Debug\netcoreapp3.1\hSubway.dll
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\obj\Debug\netcoreapp3.1\hSubway.pdb
+C:\Users\jayse.baruch\Desktop\hSubway\hSubway\hSubway\hSubway\hSubway\obj\Debug\netcoreapp3.1\hSubway.genruntimeconfig.cache

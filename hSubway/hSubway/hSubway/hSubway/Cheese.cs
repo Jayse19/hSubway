@@ -4,21 +4,23 @@ using System.Text;
 
 namespace hSubway
 {
-    class Cheese: ToppingDecorator
+    class Cheese: Bread
     {
-        public Cheese(IBuildSandwich sandwich) : base(sandwich)
+        public Bread bread;
+        public Cheese(Bread topping)
         {
-
-        }
-
-        public override string GetDescription()
-        {
-            return base.GetDescription() + ", Cheese";
+            bread = topping;
+            this.Name = bread.GetDescription() + " with Cheese";
         }
 
         public override double GetPrice()
         {
-            return base.GetPrice() + 0.75;
+            return 0.75 + bread.GetPrice();
+        }
+
+        public void Print()
+        {
+            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
         }
     }
 }

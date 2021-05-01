@@ -4,20 +4,20 @@ using System.Text;
 
 namespace hSubway
 {
-    public abstract class ToppingDecorator
+    public abstract class ToppingDecorator : IBuildSandwich
     {
-        private IBuildSandwich bs;
+        private IBuildSandwich _bs;
         public virtual string GetDescription()
         {
-            return this.bs.GetDescription();
+            return this._bs.GetDescription();
         }
         public virtual double GetPrice()
         {
-            return this.bs.GetPrice();
+            return this._bs.GetPrice();
         }
         public ToppingDecorator(IBuildSandwich aSand)
         {
-            this.bs = aSand;
+            this._bs = aSand;
         }
     }
 }
