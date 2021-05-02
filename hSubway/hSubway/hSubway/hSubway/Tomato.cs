@@ -10,7 +10,7 @@ namespace hSubway
         public Tomato(Bread topping)
         {
             bread = topping;
-            this.Name = bread.GetDescription() + " with Tomato";
+            this.Name = bread.GetDescription() + " with tomato";
         }
 
         public override double GetPrice()

@@ -6,6 +6,10 @@ namespace hSubway
     {
         static void Main(string[] args)
         {
+            PantryInventory c = new PantryInventory();
+            
+            char[] mySplits = { ' ', ':' };
+            string test;
             Bread b = new ChickenSand();
             b = new White(b);
             b = new Bacon(b);
@@ -18,9 +22,37 @@ namespace hSubway
             b = new Mustard(b);
             b = new Mayo(b);
 
-            b.Print();
+            test = b.Print();
+            
+            string[] testSplit = test.Split(mySplits);
+            c.CurrentStock(testSplit);
+
 
             Bread p = new PbjSand();
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
+            p = new White(p);
             p = new White(p);
             p = new Tomato(p);
             p = new BBQSauce(p);
@@ -28,10 +60,45 @@ namespace hSubway
             p = new Mayo(p);
             p = new Cheese(p);
 
-            p.Print();
+            test = p.Print();
+            testSplit = test.Split(mySplits);
+            c.CurrentStock(testSplit);
 
-            PantryInventory c = new PantryInventory();
-            Console.WriteLine(c.SellSandwich(b) + c.SellSandwich(p));
+            Bread d = new BLTSand();
+            d = new Rye(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Tomato(d);
+            d = new Cheese(d);
+            d = new Lettuce(d);
+            d = new Ham(d);
+            d = new BBQSauce(d);
+            d = new Mustard(d);
+            d = new Mayo(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+            d = new Bacon(d);
+
+
+
+            test = d.Print();
+            testSplit = test.Split(mySplits);
+            c.CurrentStock(testSplit);
+
+            Console.WriteLine("The total cost of all your sandwiches is: $" + (c.SellSandwich(b) + c.SellSandwich(p) + c.SellSandwich(d)));
+
+
+            c.InventoryRestock();
         }
 
     }

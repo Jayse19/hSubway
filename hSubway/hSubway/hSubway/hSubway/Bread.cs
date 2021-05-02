@@ -17,10 +17,13 @@ namespace hSubway
 
         public abstract double GetPrice();
 
-        public void Print()
+        public string Print()
         {
-            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
-            
+            string test;
+            //c.CurrentStock();
+            test = this.GetDescription() + ": $" + Math.Round(this.GetPrice(), 2, MidpointRounding.ToEven);
+            Console.WriteLine(this.GetDescription() + ": $" + Math.Round(this.GetPrice(), 2, MidpointRounding.ToEven));
+            return test;
         }
 
         
@@ -33,16 +36,16 @@ namespace hSubway
     {
         public Bread bread;
         PantryInventory c = new PantryInventory();
-
+        
         public White(Bread bt)
         {
 
             bread = bt;
-            
+
             this.Name = bread.GetDescription() + " on white bread";
-            c.InventoryInStock();
-            c.whiteBread = c.whiteBread - 2;
-            Console.WriteLine(c.whiteBread);
+            
+            
+
 
         }
  
@@ -67,10 +70,7 @@ namespace hSubway
             return 2.00 + bread.GetPrice();
         }
 
-        public void Print()
-        {
-            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
-        }
+
     }
     public class Wheat : Bread
     {
@@ -86,10 +86,6 @@ namespace hSubway
             return 2.00 + bread.GetPrice();
         }
 
-        public void Print()
-        {
-            Console.WriteLine(this.GetDescription() + ": " + this.GetPrice());
-        }
     }
     
 

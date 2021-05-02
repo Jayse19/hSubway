@@ -8,7 +8,7 @@ namespace hSubway
     {
         public PbjSand()
         {
-            this.Name = "Peanut Butter and Jelly Sandwich";
+            this.Name = "PBJ sandwich";
         }
 
         public override double GetPrice()
