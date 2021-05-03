@@ -11,7 +11,7 @@ namespace hSubway
             char[] mySplits = { ' ', ':' };
             string test;
             Bread b = new ChickenSand();
-            b = new White(b);
+            b = new Rye(b);
             b = new Bacon(b);
             b = new Bacon(b);
             b = new Tomato(b);
@@ -29,30 +29,6 @@ namespace hSubway
 
 
             Bread p = new PbjSand();
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
-            p = new White(p);
             p = new White(p);
             p = new Tomato(p);
             p = new BBQSauce(p);
@@ -95,7 +71,7 @@ namespace hSubway
             testSplit = test.Split(mySplits);
             c.CurrentStock(testSplit);
 
-            Console.WriteLine("The total cost of all your sandwiches is: $" + (c.SellSandwich(b) + c.SellSandwich(p) + c.SellSandwich(d)));
+            Console.WriteLine("The total cost of all your sandwiches plus tax is: $" + (c.SellSandwich(b) + c.SellSandwich(p) + c.SellSandwich(d)));
 
 
             c.InventoryRestock();

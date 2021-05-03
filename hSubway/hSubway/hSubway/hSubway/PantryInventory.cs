@@ -25,16 +25,6 @@ namespace hSubway
         public double TotalSales=0.0;
 
 
-        public bool InventoryNotInStock()
-        {
-            if (whiteBread <= 1 || wheatBread <= 1 || ryeBread <= 1 || pbj == 0 || chicken == 0 || blt == 0 || bacon == 0 || lettuce == 0 || tomato == 0 || cheese == 0|| bbq == 0 || mustard == 0 || mayo == 0 || ham == 0)
-            {
-                return true;
-            }
-            else 
-                return false;
-
-        }
 
 
         public void InventoryRestock()
@@ -57,87 +47,191 @@ namespace hSubway
         public double SellSandwich(Bread b)
         { 
             PantryInventory temp = this.ShallowCopy();
-            temp.TotalSales += Math.Round(b.GetPrice() * 1.03, 2, MidpointRounding.ToEven);
+            temp.TotalSales += Math.Round(b.GetPrice()*1.03, 2, MidpointRounding.ToEven);
             return temp.TotalSales;
         }
 
-        public bool CanSellSandwich()
-        {
-            if (!InventoryNotInStock())
-            {
-                return true;
-            }
-            else return false;
-        }
 
-        public void CurrentStock(string [] test)
+        public bool CurrentStock(string [] test)
         {
             foreach (var item in test)
             {
                     switch (item)
                     {
                         case "white":
+                        if (whiteBread <= 1)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false; 
+                        }
+                        else 
+                        {
                             whiteBread = whiteBread - 2;
                             break;
+                        }
+                            
                         case "wheat":
-                            wheatBread = wheatBread - 2;
+                        if (wheatBread <= 1)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
+                            wheatBread -= 2;
                             break;
+                        }
 
                         case "rye":
-                            ryeBread = ryeBread - 2;
-
+                        if (ryeBread <= 1)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
+                            ryeBread -= 2;
                             break;
+                        }
 
-                        case "Chicken":
+                    case "Chicken":
+                        if (chicken == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             chicken--;
                             break;
+                        }
 
-                        case "PBJ":
+                    case "PBJ":
+                        if (pbj == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             pbj--;
                             break;
+                        }
 
-                        case "BLT":
+                    case "BLT":
+                        if (blt == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             blt--;
                             break;
+                        }
 
-                        case "bacon":
+                    case "bacon":
+                        if (bacon == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             bacon--;
                             break;
+                        }
 
-                        case "BBQ":
+                    case "BBQ":
+                        if (bbq == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             bbq--;
                             break;
+                        }
 
-                        case "cheese":
+                    case "cheese":
+                        if (cheese == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             cheese--;
                             break;
+                        }
 
-                        case "ham":
+                    case "ham":
+                        if (ham == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             ham--;
                             break;
+                        }
 
-                        case "lettuce":
+                    case "lettuce":
+                        if (lettuce == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             lettuce--;
                             break;
+                        }
 
-                        case "mayo":
+                    case "mayo":
+                        if (mayo == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             mayo--;
                             break;
+                        }
 
-                        case "mustard":
+                    case "mustard":
+                        if (mustard == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             mustard--;
                             break;
+                        }
 
-                        case "tomato":
+                    case "tomato":
+                        if (tomato == 0)
+                        {
+                            Console.WriteLine(item + " is out of stock");
+                            return false;
+                        }
+                        else
+                        {
                             tomato--;
                             break;
+                        }
 
-                        default:
+                    default:
                             break;
                     }
-                
             }
-        }
+            return false;
+        } 
 
 
     }
