@@ -1997,6 +1997,16 @@
         "runtime": {
           "lib/netstandard2.0/Utf8Json.dll": {}
         }
+      },
+      "hSubway/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/hSubway.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/hSubway.dll": {}
+        }
       }
     }
   },
@@ -6929,6 +6939,11 @@
         "utf8json.1.3.7.nupkg.sha512",
         "utf8json.nuspec"
       ]
+    },
+    "hSubway/1.0.0": {
+      "type": "project",
+      "path": "../hSubway/hSubway.csproj",
+      "msbuildProject": "../hSubway/hSubway.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6938,6 +6953,7 @@
       "NUnit3TestAdapter >= 3.17.0",
       "SpecFlow.NUnit >= 3.7.38",
       "SpecFlow.Plus.LivingDocPlugin >= 3.7.141",
+      "hSubway >= 1.0.0",
       "nunit >= 3.13.0"
     ]
   },
@@ -6972,7 +6988,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jayse.baruch\\Desktop\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj": {
+              "projectPath": "C:\\Users\\jayse.baruch\\Desktop\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway\\hSubway.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

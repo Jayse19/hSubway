@@ -4,7 +4,7 @@ using System.Text;
 
 namespace hSubway
 {
-    class Lettuce : Bread
+    public class Lettuce : Bread
     {
         public Bread bread;
         public Lettuce(Bread topping)

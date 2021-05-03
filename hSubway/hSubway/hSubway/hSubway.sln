@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hSubway", "hSubway\hSubway.csproj", "{F95FAC55-77D5-4926-B7CB-8E267930FBFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowProject1", "SpecFlowProject1\SpecFlowProject1.csproj", "{4592F3E8-5C41-42E4-8472-EF9A71402678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlowProject1", "SpecFlowProject1\SpecFlowProject1.csproj", "{4592F3E8-5C41-42E4-8472-EF9A71402678}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F95FAC55-77D5-4926-B7CB-8E267930FBFE} = {F95FAC55-77D5-4926-B7CB-8E267930FBFE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

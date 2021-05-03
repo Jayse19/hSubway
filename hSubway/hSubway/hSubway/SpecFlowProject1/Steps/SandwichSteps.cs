@@ -1,4 +1,7 @@
-﻿using TechTalk.SpecFlow;
+﻿using System;
+using TechTalk.SpecFlow;
+using FluentAssertions;
+using hSubway;
 
 namespace SpecFlowProject1.Steps
 {
@@ -7,23 +10,35 @@ namespace SpecFlowProject1.Steps
     {
         // Test 1
         [Given(@"There is only (.*) slices of white left")]
-        public void GivenThereIsOnlySlicesOfWhiteLeft(int white)
+        public int GivenThereIsOnlySlicesOfWhiteLeft(int threeSliceOfWhite)
         {
-            //Read how many slices of white are left and if greater than 1 return (true?, the amount of white left?). 
-            ScenarioContext.Current.Pending();
+            PantryInventory checkWhite = new PantryInventory
+            {
+                whiteBread = 3
+            };
+            if (checkWhite.whiteBread <= 1)
+            {
+                Console.WriteLine("Sandwich can not be made.");
+                return 0;
+            }
+            else
+            {
+                return threeSliceOfWhite;
+            }
         }
 
         [Given(@"a PBJ on white is ordered")]
         public void GivenAPBJOnWhiteIsOrdered()
         {
-            // Check to make sure the sandwich order is PBJ and white. And if so return (true?).
-            ScenarioContext.Current.Pending();
+            Bread sandwich = new PbjSand();
+            sandwich = new White(sandwich);
         }
 
         [Then(@"Sell (.*) PBJ on white sandwich")]
         public int ThenSellPBJOnWhiteSandwich(int amountSold)
         {
-            // Return that, 1 PBJ on white was ordered.
+            Bread sandwich = new PbjSand();
+            sandwich = new White(sandwich);
             amountSold = 1;
             return amountSold;
         }
@@ -31,48 +46,72 @@ namespace SpecFlowProject1.Steps
 
         // Test 2
         [Given(@"There is only (.*) slice of white left")]
-        public void GivenThereIsOnlySliceOfWhiteLeft(int white)
+        public int GivenThereIsOnlySliceOfWhiteLeft(int sliceOfWhite)
         {
-            // Check to see how many slices of white there are left. Return the amount
-            ScenarioContext.Current.Pending();
+            PantryInventory checkWhite = new PantryInventory();
+            checkWhite.whiteBread = 1;
+            if (checkWhite.whiteBread <= 1)
+            {
+                Console.WriteLine("You have only 1 slice of white bread left.");
+                return sliceOfWhite;
+            }
+            else
+            {
+                Console.WriteLine("You have more than 1 slice of white bread left.");
+                return sliceOfWhite;
+            }
         }
 
         [Then(@"Cannot sell PBJ on white sandwich")]
         public void ThenCannotSellPBJOnWhiteSandwich()
         {
-            // Check to see if amount of white bread >= 2 if not, return cant sell sandwich for lack of bread.
-            ScenarioContext.Current.Pending();
+
+            PantryInventory checkWhite = new PantryInventory();
+            checkWhite.whiteBread = 1;
+            if (checkWhite.whiteBread <= 1)
+            {
+                Console.WriteLine("You can not make the sandwich.");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("You can make the sandwich");
+                return;
+            }
         }
 
         // Test 3
         [Given(@"white costs (.*)")]
-        public void GivenWhiteCosts(double costOfWhite)
+        public double GivenWhiteCosts(double costOfWhite)
         {
-
-            // Read and return the cost of white bread.
-            ScenarioContext.Current.Pending();
+            Bread whiteBread = new PbjSand();
+            whiteBread = new White(whiteBread);
+            costOfWhite = whiteBread.GetPrice() -0.75;
+            return costOfWhite;
         }
 
         [Given(@"PBJ costs (.*)")]
-        public void GivenPBJCosts(double costOfPBJ)
+        public double GivenPBJCosts(double costOfPBJ)
         {
-
-            // Read and return the cost of a PBJ sandwich.
-            ScenarioContext.Current.Pending();
+            Bread PBJ = new PbjSand();
+            costOfPBJ = PBJ.GetPrice();
+            return costOfPBJ;
         }
 
         [Given(@"when a PBJ on white is ordered")]
         public void GivenWhenAPBJOnWhiteIsOrdered()
         {
-            // Check the bread to make sure of stock, and return true if valid.
-            ScenarioContext.Current.Pending();
+            Bread sandwich = new PbjSand();
+            sandwich = new White(sandwich);
         }
 
         [Then(@"the cost should be (.*)")]
-        public void ThenTheCostShouldBe(double totalCost)
+        public double ThenTheCostShouldBe(double totalCost)
         {
-            // Read cost of white bread and of PBJ and return totalCost.
-            ScenarioContext.Current.Pending();
+            Bread PBJonWhite = new PbjSand();
+            PBJonWhite = new White(PBJonWhite);
+            totalCost = PBJonWhite.GetPrice();
+            return totalCost;
         }
 
 
@@ -80,96 +119,127 @@ namespace SpecFlowProject1.Steps
         [Given(@"when a PBJ on wheat is ordered")]
         public void GivenWhenAPBJOnWheatIsOrdered()
         {
-            // Check wheat bread to make sure it is in stock and return ture if valid.
-            ScenarioContext.Current.Pending();
+            Bread sandwich = new PbjSand();
+            sandwich = new Wheat(sandwich);
         }
 
         // Cost of Rye
         [Given(@"rye costs (.*)")]
-        public void GivenRyeCosts(double costOfRye)
+        public double GivenRyeCosts(double costOfRye)
         {
-            // Read and return the cost of Rye bread.
-            ScenarioContext.Current.Pending();
+            Bread ryeBread = new PbjSand();
+            ryeBread = new White(ryeBread);
+            costOfRye = ryeBread.GetPrice() - 0.75;
+            return costOfRye;
         }
 
         // PBJ on Rye
         [Given(@"when a PBJ on rye is ordered")]
         public void GivenWhenAPBJOnRyeIsOrdered()
         {
-            // Verify the stock of Rye bread and return true if valid.
-            ScenarioContext.Current.Pending();
+            Bread sandwich = new PbjSand();
+            sandwich = new Rye(sandwich);
         }
 
         // Cost of Shredded Chicken
         [Given(@"shredded chicken costs (.*)")]
-        public void GivenShreddedChickenCosts(double costOfShreddedChicken)
+        public double GivenShreddedChickenCosts(double costOfShreddedChicken)
         {
-            // Read and return the cost of shredded chicken
-            ScenarioContext.Current.Pending();
+            Bread shredded = new ChickenSand();
+            costOfShreddedChicken = shredded.GetPrice();
+            return costOfShreddedChicken;
         }
 
         // Shredded Chicken on White
         [Given(@"when a shredded chicken on white is ordered")]
         public void GivenWhenAShreddedChickenOnWhiteIsOrdered()
         {
-            // Verify the stock of white bread and return true if valid.
-            ScenarioContext.Current.Pending();
+            Bread sandwich = new ChickenSand();
+            sandwich = new White(sandwich);
         }
 
         // Cost of Wheat Bread
         [Given(@"wheat costs (.*)")]
-        public void GivenWheatCosts(double costOfWhite)
+        public double GivenWheatCosts(double costOfWheat)
         {
-            // Read and return the cost of wheat bread.
-            ScenarioContext.Current.Pending();
+            Bread wheatBread = new PbjSand();
+            wheatBread = new Wheat(wheatBread);
+            costOfWheat = wheatBread.GetPrice() - 0.75;
+            return costOfWheat;
         }
 
         // Chicken on Wheat
         [Given(@"when a shredded chicken on wheat is ordered")]
         public void GivenWhenAShreddedChickenOnWheatIsOrdered()
         {
-            // Verify the stock of wheat bread and return true if valid.
-            ScenarioContext.Current.Pending();
+            Bread sandwich = new ChickenSand();
+            sandwich = new Wheat(sandwich);
         }
 
         // Chicken on Rye
         [Given(@"when a shredded chicken on rye is ordered")]
         public void GivenWhenAShreddedChickenOnRyeIsOrdered()
         {
-            // Verify the stock of Rye bread, return true if valid.
-            ScenarioContext.Current.Pending();
+            Bread sandwich = new ChickenSand();
+            sandwich = new Rye(sandwich);
         }
 
         // Cost of Cheese
         [Given(@"cheese costs (.*)")]
-        public void GivenCheeseCosts(double costOfCheese)
+        public double GivenCheeseCosts(double costOfCheese)
         {
-            // Read and return the cost of cheese.
-            ScenarioContext.Current.Pending();
+            Bread cheese = new PbjSand();
+            cheese = new Cheese(cheese);
+            costOfCheese = cheese.GetPrice() - 0.75;
+            return costOfCheese;
         }
 
         // Cost of Lettuce
         [Given(@"lettuce costs (.*)")]
-        public void GivenLettuceCosts(double costOfLettuce)
+        public double GivenLettuceCosts(double costOfLettuce)
         {
-            // Read and return the cost of lettuce.
-            ScenarioContext.Current.Pending();
+            Bread lettuce = new PbjSand();
+            lettuce = new Lettuce(lettuce);
+            costOfLettuce = lettuce.GetPrice() - 0.75;
+            return costOfLettuce;
         }
 
         // Cost of Tomato
         [Given(@"tomato costs (.*)")]
-        public void GivenTomatoCosts(double costOfTomato)
+        public double GivenTomatoCosts(double costOfTomato)
         {
-            // Read and return the cost of tomato.
-            ScenarioContext.Current.Pending();
+            Bread tomato = new PbjSand();
+            tomato = new Tomato(tomato);
+            costOfTomato = tomato.GetPrice() - 0.75;
+            return costOfTomato;
         }
 
         // Cost of Bacon
         [Given(@"bacon costs (.*)")]
-        public void GivenBaconCosts(double costOfBacon)
+        public double GivenBaconCosts(double costOfBacon)
         {
-            // Read and return the cost of bacon.
-            ScenarioContext.Current.Pending();
+            Bread bacon = new PbjSand();
+            bacon = new Bacon(bacon);
+            costOfBacon = bacon.GetPrice() - 0.75;
+            return costOfBacon;
+        }
+
+        [Given(@"mayo costs (.*)")]
+        public double GivenMayoCosts(double costOfMayo)
+        {
+            Bread mayo = new PbjSand();
+            mayo = new Mayo(mayo);
+            costOfMayo = mayo.GetPrice() - 0.75;
+            return costOfMayo;
+        }
+
+        [Given(@"mustard costs (.*)")]
+        public double GivenMustardCosts(double costOfMustard)
+        {
+            Bread mustard = new PbjSand();
+            mustard = new Mustard(mustard);
+            costOfMustard = mustard.GetPrice() - 0.75;
+            return costOfMustard;
         }
 
     }

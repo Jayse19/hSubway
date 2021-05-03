@@ -6,7 +6,6 @@ namespace hSubway
 {
     public abstract class Bread
     {
-        PantryInventory c = new PantryInventory();
 
         public string Name = "";
 
@@ -20,7 +19,6 @@ namespace hSubway
         public string Print()
         {
             string test;
-            //c.CurrentStock();
             test = this.GetDescription() + ": $" + Math.Round(this.GetPrice(), 2, MidpointRounding.ToEven);
             Console.WriteLine(this.GetDescription() + ": $" + Math.Round(this.GetPrice(), 2, MidpointRounding.ToEven));
             return test;
@@ -35,7 +33,6 @@ namespace hSubway
     public class White : Bread
     {
         public Bread bread;
-        PantryInventory c = new PantryInventory();
         
         public White(Bread bt)
         {
@@ -67,7 +64,7 @@ namespace hSubway
 
         public override double GetPrice()
         {
-            return 2.00 + bread.GetPrice();
+            return 2.50 + bread.GetPrice();
         }
 
 
@@ -83,7 +80,7 @@ namespace hSubway
 
         public override double GetPrice()
         {
-            return 2.00 + bread.GetPrice();
+            return 2.25 + bread.GetPrice();
         }
 
     }

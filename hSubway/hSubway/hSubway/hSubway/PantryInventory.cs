@@ -61,91 +61,81 @@ namespace hSubway
             return temp.TotalSales;
         }
 
+        public bool CanSellSandwich()
+        {
+            if (!InventoryNotInStock())
+            {
+                return true;
+            }
+            else return false;
+        }
+
         public void CurrentStock(string [] test)
         {
             foreach (var item in test)
             {
-                if (InventoryNotInStock())
-                {
-                    return;
-                }
-                else
-                {
                     switch (item)
                     {
                         case "white":
                             whiteBread = whiteBread - 2;
-                            Console.WriteLine("white: " + whiteBread);
                             break;
                         case "wheat":
                             wheatBread = wheatBread - 2;
-                            Console.WriteLine("wheat: " + wheatBread);
                             break;
 
                         case "rye":
                             ryeBread = ryeBread - 2;
-                            Console.WriteLine("rye: " + ryeBread);
+
                             break;
 
                         case "Chicken":
                             chicken--;
-                            Console.WriteLine("chicken: " + chicken);
                             break;
 
                         case "PBJ":
                             pbj--;
-                            Console.WriteLine("PBJ: " + pbj);
                             break;
 
                         case "BLT":
                             blt--;
-                            Console.WriteLine("BLT: " + blt);
                             break;
 
                         case "bacon":
                             bacon--;
-                            Console.WriteLine("bacon: " + bacon);
                             break;
 
                         case "BBQ":
                             bbq--;
-                            Console.WriteLine("BBQ: " + bbq);
                             break;
 
                         case "cheese":
                             cheese--;
-                            Console.WriteLine("cheese: " + cheese);
                             break;
 
                         case "ham":
                             ham--;
-                            Console.WriteLine("ham: " + ham);
                             break;
 
                         case "lettuce":
                             lettuce--;
-                            Console.WriteLine("lettuce: " + lettuce);
                             break;
 
                         case "mayo":
                             mayo--;
-                            Console.WriteLine("mayo: " + mayo);
                             break;
 
                         case "mustard":
                             mustard--;
-                            Console.WriteLine("mustard: " + mustard);
                             break;
 
                         case "tomato":
                             tomato--;
-                            Console.WriteLine("tomato: " + tomato);
                             break;
 
                         default:
                             break;
                     }
-                }
+                
             }
         }
 
